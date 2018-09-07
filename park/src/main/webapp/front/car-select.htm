@@ -1,0 +1,436 @@
+<!doctype html>
+
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+	<link rel="stylesheet" href="index.css" tppabs="http://47.106.68.49:8066/moban/css/index.css" />
+	<link rel="stylesheet" href="table.css" tppabs="http://47.106.68.49:8066/moban/css/table.css" />
+	<script src="jquery-1.7.2.min.js" tppabs="http://47.106.68.49:8066/moban/js/jquery-1.7.2.min.js"></script>
+	<script src="main.js" tppabs="http://47.106.68.49:8066/moban/js/main.js"></script>
+	<script type="text/javascript" src="WdatePicker.js" tppabs="http://47.106.68.49:8066/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+	<title>查询车位</title>
+</head>
+<body>
+
+<div>
+<div class="top" id="item4">
+	<div class="container clearfix">
+		<ul class="clearfix fr">
+			<li><a href="join.htm" tppabs="http://47.106.68.49:8066/join">登录</a></li>
+			
+			
+			
+		</ul>
+	</div>
+</div>
+
+<div class="header">
+	<div class="container clearfix">
+		<div class="logo fl">
+			<a href="index.htm" tppabs="http://47.106.68.49:8066/index"><img alt="" src="logoo.png" tppabs="http://47.106.68.49:8066/moban/images/logoo.png" /></a>
+		</div>
+		<div class="mm fr clearfix">
+			<a href="car-select.htm" tppabs="http://47.106.68.49:8066/car/car-select">查车位</a>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="list-main">
+	<div class="container">
+		<div class="bread" style="margin-bottom: 0;">当前位置：
+			<a href="#">首页</a> >
+			<a href="#">查车位</a>
+		</div>
+		<ul class="select">
+			<li class="select-result">
+				<dl>
+					<dt>筛选条件：</dt>
+					<dd class="select-no">
+						<form action="http://47.106.68.49:8066/car/findCar" id="findP" method="post">
+							<select class="form-control" name="status" onchange="selectPark()">
+								<option value="-1">全部</option>
+								<option value="0">可预约</option>
+								<option value="1">已预约</option>
+							</select>
+						</form>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+		<div class="tabs book clearfix">
+			<dl>
+				<dt><a href="detail-id=1.htm" tppabs="http://47.106.68.49:8066/car/detail?id=1">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=1.htm" tppabs="http://47.106.68.49:8066/car/detail?id=1">车位一</a></p>
+					<p></p>
+					<p>￥100.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=2.htm" tppabs="http://47.106.68.49:8066/car/detail?id=2">
+				<img alt="可预约" src="cw.png" tppabs="http://47.106.68.49:8066/moban/images/cw.png" title="可预约" /></a>
+				
+				</dt>
+				<dd>
+					<p><a href="detail-id=2.htm" tppabs="http://47.106.68.49:8066/car/detail?id=2">车位二</a></p>
+					<p></p>
+					<p>￥79.5</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=4.htm" tppabs="http://47.106.68.49:8066/car/detail?id=4">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=4.htm" tppabs="http://47.106.68.49:8066/car/detail?id=4">车位三</a></p>
+					<p></p>
+					<p>￥213.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=8.htm" tppabs="http://47.106.68.49:8066/car/detail?id=8">
+				<img alt="可预约" src="cw.png" tppabs="http://47.106.68.49:8066/moban/images/cw.png" title="可预约" /></a>
+				
+				</dt>
+				<dd>
+					<p><a href="detail-id=8.htm" tppabs="http://47.106.68.49:8066/car/detail?id=8">车位四</a></p>
+					<p></p>
+					<p>￥112.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=9.htm" tppabs="http://47.106.68.49:8066/car/detail?id=9">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=9.htm" tppabs="http://47.106.68.49:8066/car/detail?id=9">车位五</a></p>
+					<p></p>
+					<p>￥88.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=10.htm" tppabs="http://47.106.68.49:8066/car/detail?id=10">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=10.htm" tppabs="http://47.106.68.49:8066/car/detail?id=10">车位六</a></p>
+					<p></p>
+					<p>￥998.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=11.htm" tppabs="http://47.106.68.49:8066/car/detail?id=11">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=11.htm" tppabs="http://47.106.68.49:8066/car/detail?id=11">车位七</a></p>
+					<p></p>
+					<p>￥100.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=12.htm" tppabs="http://47.106.68.49:8066/car/detail?id=12">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=12.htm" tppabs="http://47.106.68.49:8066/car/detail?id=12">车位八</a></p>
+					<p></p>
+					<p>￥100.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=13.htm" tppabs="http://47.106.68.49:8066/car/detail?id=13">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=13.htm" tppabs="http://47.106.68.49:8066/car/detail?id=13">车位九</a></p>
+					<p></p>
+					<p>￥90.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=14.htm" tppabs="http://47.106.68.49:8066/car/detail?id=14">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=14.htm" tppabs="http://47.106.68.49:8066/car/detail?id=14">车位十</a></p>
+					<p></p>
+					<p>￥77.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=15.htm" tppabs="http://47.106.68.49:8066/car/detail?id=15">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=15.htm" tppabs="http://47.106.68.49:8066/car/detail?id=15">车位十一</a></p>
+					<p></p>
+					<p>￥100.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=16.htm" tppabs="http://47.106.68.49:8066/car/detail?id=16">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=16.htm" tppabs="http://47.106.68.49:8066/car/detail?id=16">车位十二</a></p>
+					<p></p>
+					<p>￥50.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=17.htm" tppabs="http://47.106.68.49:8066/car/detail?id=17">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=17.htm" tppabs="http://47.106.68.49:8066/car/detail?id=17">车位十四</a></p>
+					<p></p>
+					<p>￥100.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=18.htm" tppabs="http://47.106.68.49:8066/car/detail?id=18">
+				<img alt="可预约" src="cw.png" tppabs="http://47.106.68.49:8066/moban/images/cw.png" title="可预约" /></a>
+				
+				</dt>
+				<dd>
+					<p><a href="detail-id=18.htm" tppabs="http://47.106.68.49:8066/car/detail?id=18">车位十三</a></p>
+					<p></p>
+					<p>￥520.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=19.htm" tppabs="http://47.106.68.49:8066/car/detail?id=19">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=19.htm" tppabs="http://47.106.68.49:8066/car/detail?id=19">111</a></p>
+					<p></p>
+					<p>￥111.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=20.htm" tppabs="http://47.106.68.49:8066/car/detail?id=20">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=20.htm" tppabs="http://47.106.68.49:8066/car/detail?id=20">111</a></p>
+					<p></p>
+					<p>￥111.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=21.htm" tppabs="http://47.106.68.49:8066/car/detail?id=21">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=21.htm" tppabs="http://47.106.68.49:8066/car/detail?id=21">车位十五</a></p>
+					<p></p>
+					<p>￥150.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=22.htm" tppabs="http://47.106.68.49:8066/car/detail?id=22">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=22.htm" tppabs="http://47.106.68.49:8066/car/detail?id=22">车位88</a></p>
+					<p></p>
+					<p>￥321.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=23.htm" tppabs="http://47.106.68.49:8066/car/detail?id=23">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=23.htm" tppabs="http://47.106.68.49:8066/car/detail?id=23">666</a></p>
+					<p></p>
+					<p>￥66.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=24.htm" tppabs="http://47.106.68.49:8066/car/detail?id=24">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=24.htm" tppabs="http://47.106.68.49:8066/car/detail?id=24">12313546</a></p>
+					<p></p>
+					<p>￥10000.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=25.htm" tppabs="http://47.106.68.49:8066/car/detail?id=25">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=25.htm" tppabs="http://47.106.68.49:8066/car/detail?id=25">11212</a></p>
+					<p></p>
+					<p>￥10000.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=26.htm" tppabs="http://47.106.68.49:8066/car/detail?id=26">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=26.htm" tppabs="http://47.106.68.49:8066/car/detail?id=26">抢车位</a></p>
+					<p></p>
+					<p>￥10000.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=27.htm" tppabs="http://47.106.68.49:8066/car/detail?id=27">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=27.htm" tppabs="http://47.106.68.49:8066/car/detail?id=27">不告诉你</a></p>
+					<p></p>
+					<p>￥999.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=28.htm" tppabs="http://47.106.68.49:8066/car/detail?id=28">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=28.htm" tppabs="http://47.106.68.49:8066/car/detail?id=28">4836</a></p>
+					<p></p>
+					<p>￥4836.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=29.htm" tppabs="http://47.106.68.49:8066/car/detail?id=29">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=29.htm" tppabs="http://47.106.68.49:8066/car/detail?id=29">26</a></p>
+					<p></p>
+					<p>￥50.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=30.htm" tppabs="http://47.106.68.49:8066/car/detail?id=30">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=30.htm" tppabs="http://47.106.68.49:8066/car/detail?id=30">车位666</a></p>
+					<p></p>
+					<p>￥666.0</p>
+				</dd>
+
+			</dl>
+			<dl>
+				<dt><a href="detail-id=31.htm" tppabs="http://47.106.68.49:8066/car/detail?id=31">
+				</a>
+				<img alt="已占用" src="cw2.png" tppabs="http://47.106.68.49:8066/moban/images/cw2.png" title="已占用" />
+				</dt>
+				<dd>
+					<p><a href="detail-id=31.htm" tppabs="http://47.106.68.49:8066/car/detail?id=31">hello</a></p>
+					<p></p>
+					<p>￥999.0</p>
+				</dd>
+
+			</dl>
+		</div>
+
+	</div>
+</div>
+
+
+<div class="foot" style="background-color: #ebebeb">
+	<div class="container">
+		<div class="zhinan">
+			<ul class="clearfix">
+				<li class="item-li">关于我们
+					<ul>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">网站公告</a></li>
+					</ul>
+				</li>
+				<li class="item-li">新手指南
+					<ul>
+						<li><a href="#">如何买票</a></li>
+						<li><a href="#">修改密码</a></li>
+					</ul>
+				</li>
+				<li class="item-li">配送方式
+					<ul>
+						<li><a href="#">配送范围</a></li>
+						<li><a href="#">配送时间</a></li>
+					</ul>
+				</li>
+				<li class="item-li">售后服务
+					<ul>
+						<li><a href="#">退票申请</a></li>
+						<li><a href="#">改签申请</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="line"></div>
+
+		<div class="bottom">
+			<p>友情链接：<a href="#"></a>&nbsp;&nbsp;<a href="javascript:if(confirm(%27http://47.106.68.49:8066/car/www.baidu.com  \n\nThis file was not retrieved by Teleport Pro, because the server reports that this file cannot be found.  \n\nDo you want to open it from the server?%27))window.location=%27http://47.106.68.49:8066/car/www.baidu.com%27" tppabs="http://47.106.68.49:8066/car/www.baidu.com">百度</a></p>
+			<p>本站所有信息均为用户自由发布，本站不对信息的真实性负任何责任，交易时请注意识别信息的真假如有网站内容侵害了您的权益请联系我们删除</p>
+			<p>Copyright &copy;1956-2018 基于H5得汽车订票系统.</p></div>
+		</div>
+	</div>
+<script type="text/javascript">
+function selectPark(){
+	$("#findP").submit();
+}
+</script>
+
+</body></html>

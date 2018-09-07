@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>订票网</title>
+<link rel="stylesheet" type="text/css" href="index.css" tppabs="http://47.106.68.49:8066/moban/css/index.css" />
+<link rel="stylesheet" type="text/css" href="animate-custom.css" tppabs="http://47.106.68.49:8066/moban/css/animate-custom.css" />
+</head>
+<body style="background: #fff url(bg.jpg)/*tpa=http://47.106.68.49:8066/moban/images/bg.jpg*/ repeat top left;">
+
+<div id="container_demo">
+	<a class="hiddenanchor" id="toregister"></a>
+	<a class="hiddenanchor" id="tologin"></a>
+	<div id="wrapper">
+		<div class="animate form" id="login">
+			<form action="http://47.106.68.49:8066/user/login" autocomplete="on" method="post">
+				<h1>登录</h1> 
+				<p> 
+					<label class="uname" data-icon="u" for="username">您的用户名</label>
+					<input id="username" name="name" placeholder="请输入用户名" required="required" type="text" />
+				</p>
+				<p> 
+					<label class="youpasswd" data-icon="p" for="password">你的密码</label>
+					<input id="password" name="password" placeholder="请输入密码" required="required" type="password" />
+				</p>
+				<p> 
+					<span style="color: red;font-size: 18px"></span>
+				</p>
+				<p class="login button"> 
+					<input type="submit" value="登录" /> 
+				</p>
+				<p class="change_link">
+					不是成员?<a class="to_register" href="#toregister">加入我们</a>
+				</p>
+			</form>
+		</div>
+
+		<div class="animate form" id="register">
+			<form action="http://47.106.68.49:8066/user/user-save" autocomplete="on" method="post">
+				<h1>注册</h1> 
+				<p> 
+					<label class="uname" data-icon="u" for="usernamesignup">用户名</label>
+					<input id="usernamesignup" name="name" placeholder="用户名" required="required" type="text" />
+				</p>
+				<p> 
+					<label class="youmail" for="tel">联系电话</label>
+					<input id="tel" name="phone" placeholder="联系电话" required="required" type="tel" />
+				</p>
+				<p> 
+					<label class="youmail" for="academy">车牌号码</label>
+					<input id="academy" name="plate_num" placeholder="车牌号码" required="required" type="tel" />
+				</p>
+				<p> 
+					<label class="youpasswd" data-icon="p" for="passwordsignup">密码</label>
+					<input id="passwordsignup" name="password" placeholder="密码" required="required" type="password" />
+				</p>
+				<p class="signin button"> 
+					<input type="submit" value="注册" /> 
+				</p>
+				<p class="change_link">  
+					已经是成员?<a class="to_register" href="#tologin"> 去登录 </a>
+				</p>
+			</form>
+		</div>
+		
+	</div>
+	
+</div>
+	
+
+</body></html>
