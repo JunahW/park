@@ -14,5 +14,5 @@ http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
 
 	<!-- @Service扫描 -->
 	<context:component-scan
-		base-package="com.park.service"></context:component-scan>
+		base-package="com.yiboche.service"></context:component-scan>
 </beans>

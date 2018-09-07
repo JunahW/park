@@ -38,7 +38,7 @@ http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
 	<!-- 切面 -->
 	<aop:config>
 		<aop:advisor advice-ref="txAdvice"
-			pointcut="execution(* com.park.service.*.*(..))" />
+			pointcut="execution(* com.yiboche.service.*.*(..))" />
 	</aop:config>
 
 </beans>
