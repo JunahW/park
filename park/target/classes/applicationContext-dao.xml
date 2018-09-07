@@ -33,14 +33,25 @@
 		<!-- 加载mybatis的全局配置文件 -->
 		<property name="configLocation"
 			value="classpath:SqlMapConfig.xml" />
-		<!-- 配置分页插件 <property name="plugins"> <array> <bean class="com.github.pagehelper.PageHelper"> 
-			<property name="properties"> <value> dialect=mysql </value> </property> </bean> 
-			</array> </property> -->
+		<!-- 配置分页插件 -->
+		<property name="plugins">
+			<array>
+				<bean class="com.github.pagehelper.PageHelper">
+					<property name="properties">
+						<value>
+							dialect=mysql
+						</value>
+					</property>
+				</bean>
+			</array>
+		</property>
+
+
 	</bean>
 
 	<!-- 配置Mapper扫描器 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.park.dao" />
+		<property name="basePackage" value="com.yiboche.dao" />
 	</bean>
 
 </beans>
